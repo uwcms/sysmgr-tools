@@ -1,0 +1,12 @@
+#host = "localhost"
+#password = ""
+#port = 4681
+outfile = data.csv
+interval = 5
+
+sensor {
+	#crate = 2
+	#fru = 13
+	card = ""
+	sensor = ""
+}
