@@ -144,7 +144,7 @@ int main(int argc, char *argv[]) {
 						if (sensor[0] != '\0' && s_it->name != sensor)
 							continue;
 
-						sensors.push_back(Sensor(c_it->crateno, f_it->fru, s_it->name, stdsprintf("C%hhu F%hhu (%s) %s", c_it->crateno, f_it->fru, f_it->name.c_str(), s_it->name.c_str())));
+						sensors.push_back(Sensor(c_it->crateno, f_it->fru, s_it->name, stdsprintf("C%hhu %s (%s) %s", c_it->crateno, sysmgr::sysmgr::get_slotstring(f_it->fru).c_str(), f_it->name.c_str(), s_it->name.c_str())));
 						found = true;
 					}
 				}
