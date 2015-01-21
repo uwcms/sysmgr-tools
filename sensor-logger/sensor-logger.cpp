@@ -168,6 +168,7 @@ int main(int argc, char *argv[]) {
 			fprintf(fd, CSV_COMMA "\"%s\"", it->name.c_str());
 		}
 		fprintf(fd, "\n");
+		fflush(fd);
 
 		time_t now;
 		char timestamp[32];
