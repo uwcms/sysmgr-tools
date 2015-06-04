@@ -4,7 +4,7 @@ CCOPTS = $(DEPOPTS) -ggdb -Wall
 all: sensor-logger tags
 
 sensor-logger: sensor-logger.cpp
-	g++ $(CCOPTS) $(IPMILIBS) -o $@ sensor-logger.cpp -lconfuse -lsysmgr
+	g++ $(CCOPTS) -o $@ sensor-logger.cpp -lconfuse -lsysmgr
 
 tags: *.cpp
 	ctags -R . 2>/dev/null || true
