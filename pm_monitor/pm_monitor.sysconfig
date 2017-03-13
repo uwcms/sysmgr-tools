@@ -1,0 +1,31 @@
+export PM_MON_SMTP_HOST=
+#export PM_MON_SMTP_SSL=1
+export PM_MON_SMTP_USER=
+export PM_MON_SMTP_PASSWORD=
+export PM_MON_SMTP_FROM=
+export PM_MON_SMTP_TO=
+
+# Print events to console
+#export PM_MON_VERBOSE=1
+
+# CSV logfile for all readings.
+PM_MON_LOGFILE=/var/log/pm_monitor.csv
+
+# Crates to monitor.  Unset or 'ALL' for all crates.
+#export PM_MON_CRATES=1,2,4
+
+# Below this number of total crate amps, checking is disabled.
+#export PM_MON_LOAD_SUM_THRESHOLD=16
+
+# Alert if any PM has >= this percent of the load share.
+#export PM_MON_LOAD_SHARE_WARNING_LEVEL=0.6
+#export PM_MON_LOAD_SHARE_WARNING_LEVEL=0.7
+
+# Number of recent readings to track
+#export PM_MON_RECENT_READINGS=12
+
+# Alerts will not be repeated within
+#export PM_MON_ALERT_LOCKOUT_SECONDS=3600
+
+# Number of consecutive read errors or zero sensor values before alerting
+#export PM_MON_CONSECUTIVE_ERRORS=5
