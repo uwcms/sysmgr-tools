@@ -9,10 +9,13 @@ export PM_MON_SMTP_TO=
 #export PM_MON_VERBOSE=1
 
 # CSV logfile for all readings.
-PM_MON_LOGFILE=/var/log/pm_monitor.csv
+export PM_MON_LOGFILE=/var/log/pm_monitor.csv
 
 # Crates to monitor.  Unset or 'ALL' for all crates.
 #export PM_MON_CRATES=1,2,4
+
+# The sleep() period between consecutive samples
+#export PM_MON_SAMPLING_INTERVAL=60
 
 # Below this number of total crate amps, checking is disabled.
 #export PM_MON_LOAD_SUM_THRESHOLD=16

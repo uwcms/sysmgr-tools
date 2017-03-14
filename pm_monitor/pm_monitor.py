@@ -165,7 +165,7 @@ def run_monitor(alertmgr):
 				print('{e} occured during scan of crate {crate.number}'.format(e=repr(e), crate=crate))
 				print('\n'+''.join(traceback.format_exception(type(e), e, e.__traceback__))+'\n')
 				s = sysmgr.Sysmgr() # Reconnect possibly required.
-		time.sleep(30)
+		time.sleep(int(os.environ.get('PM_MON_SAMPLING_INTERVAL','60')))
 
 if __name__ == '__main__':
 	log_filename = os.environ.get('PM_MON_LOGFILE', ('/var/log/pm_monitor.csv' if os.geteuid() == 0 else 'pm_monitor.csv'))
